@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maryum Shehzad — Social Media Marketing Portfolio</title>
+<meta name="description" content="Social Media Marketer, Content Creator & Digital Strategist based in Islamabad, Pakistan. Available for freelance and internships.">
+<meta name="keywords" content="social media marketer, content creator, instagram marketing, brand strategy, Islamabad, Pakistan, freelance">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@2.44.0/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0E0E0E;--bg2:#161616;--bg3:#1E1E1E;
+  --line:#2A2A2A;--line2:#333;
+  --white:#F0EDE8;--muted:#888;--faint:#444;
+  --rose:#C97A6E;--rose2:#E8A898;--teal:#4ABFA0;--amber:#D4A843;
+  --display:'Bebas Neue',sans-serif;
+  --serif:'Playfair Display',serif;
+  --sans:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:var(--sans);min-height:100vh;-webkit-font-smoothing:antialiased}
+.page{max-width:860px;margin:0 auto;padding:0 1.5rem}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(14,14,14,0.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);padding:0.85rem 1.5rem}
+.nav-inner{max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.nav-name{font-family:var(--display);font-size:18px;letter-spacing:0.08em;color:var(--white)}
+.nav-links{display:flex;gap:1.5rem}
+.nav-link{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s}
+.nav-link:hover{color:var(--rose)}
+
+/* HERO */
+.hero{padding:4.5rem 0 3.5rem;border-bottom:1px solid var(--line)}
+.hero-eyebrow{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--rose);margin-bottom:1.25rem}
+.hero-name{font-family:var(--display);font-size:96px;line-height:0.88;color:var(--white);letter-spacing:0.02em}
+.hero-name span{color:var(--rose)}
+.hero-tagline{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted);margin:1.25rem 0 2rem;line-height:1.4}
+.hero-bar{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.hero-pill{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;padding:5px 16px;
+  border:1px solid var(--faint);border-radius:50px;color:var(--muted)}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--teal)}
+.hero-avail{font-size:12px;color:var(--teal)}
+
+/* SECTION */
+.sec{padding:3rem 0 0}
+.sec-header{display:flex;align-items:center;gap:1rem;margin-bottom:1.75rem}
+.sec-num{font-family:var(--display);font-size:13px;color:var(--rose);letter-spacing:0.1em}
+.sec-title{font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:var(--muted)}
+.sec-line{flex:1;height:1px;background:var(--line)}
+
+/* TOOL CATEGORIES */
+.cat-grid{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.cat-row{background:var(--bg2);padding:1.1rem 1.5rem;display:grid;grid-template-columns:190px 1fr;
+  gap:1.25rem;align-items:start;border-bottom:1px solid var(--line);transition:background 0.2s}
+.cat-row:hover{background:var(--bg3)}
+.cat-row:last-child{border-bottom:none}
+.cat-label{display:flex;align-items:center;gap:10px}
+.cat-icon{font-size:17px;color:var(--rose)}
+.cat-name{font-size:12.5px;font-weight:500;color:var(--white);letter-spacing:0.04em}
+.tools-wrap{display:flex;flex-wrap:wrap;gap:7px}
+.tool-tag{font-size:12px;padding:4px 13px;border-radius:50px;border:1px solid var(--line2);
+  color:var(--muted);background:var(--bg3);transition:all 0.2s;cursor:default}
+.tool-tag:hover{border-color:var(--faint);color:var(--white)}
+.tool-tag.hot{border-color:var(--rose);color:var(--rose2);background:#1A0E0C}
+.tool-tag.teal{border-color:var(--teal);color:var(--teal);background:#071512}
+.tool-tag.amber{border-color:var(--amber);color:var(--amber);background:#14100A}
+
+/* WORKFLOW */
+.flow-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.flow-step{background:var(--bg2);padding:1.5rem 1.25rem;text-align:center;border-right:1px solid var(--line);transition:background 0.2s}
+.flow-step:hover{background:var(--bg3)}
+.flow-step:last-child{border-right:none}
+.flow-num{font-family:var(--display);font-size:36px;color:var(--rose);line-height:1}
+.flow-label{font-size:13px;font-weight:500;color:var(--white);margin-top:6px}
+.flow-sub{font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.5}
+
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.svc-card{background:var(--bg2);border:1px solid var(--line);border-radius:14px;
+  padding:1.5rem;transition:border-color 0.25s,background 0.2s;cursor:default}
+.svc-card:hover{border-color:var(--rose);background:var(--bg3)}
+.svc-icon{font-size:22px;color:var(--rose);margin-bottom:10px}
+.svc-title{font-size:15px;font-weight:500;color:var(--white);margin-bottom:7px}
+.svc-desc{font-size:13px;color:var(--muted);line-height:1.65}
+
+/* QUOTE */
+.quote{margin:3rem 0 0;padding:2.5rem;border:1px solid var(--line);border-radius:14px;background:var(--bg2)}
+.quote-inner{font-family:var(--display);font-size:52px;line-height:1.0;color:var(--white);letter-spacing:0.02em}
+.quote-inner em{color:var(--rose);font-style:normal}
+.quote-attr{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--faint);margin-top:1.25rem}
+
+/* CONTACT */
+.contact{margin:3rem 0 0;padding:2.5rem;border:1px solid var(--line);border-radius:14px;
+  background:var(--bg2);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.contact-left h3{font-family:var(--display);font-size:28px;letter-spacing:0.04em;margin-bottom:6px}
+.contact-left p{font-size:13px;color:var(--muted);line-height:1.6}
+.contact-links{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.contact-link{font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);
+  text-decoration:none;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+.contact-link:hover{color:var(--rose)}
+.contact-link i{font-size:15px}
+
+/* FOOTER */
+.footer{padding:2rem 0;border-top:1px solid var(--line);margin-top:3rem;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.footer-name{font-family:var(--display);font-size:16px;color:var(--faint);letter-spacing:0.08em}
+.footer-note{font-size:11px;color:var(--faint)}
+
+/* LEGEND */
+.legend{display:flex;gap:1.25rem;flex-wrap:wrap;margin-bottom:1rem}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--muted)}
+.legend-dot{width:8px;height:8px;border-radius:50%}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.hero{animation:fadeUp 0.6s ease both}
+.sec{animation:fadeUp 0.6s ease both}
+.sec:nth-child(3){animation-delay:0.1s}
+.sec:nth-child(4){animation-delay:0.15s}
+.sec:nth-child(5){animation-delay:0.2s}
+.sec:nth-child(6){animation-delay:0.25s}
+.quote{animation:fadeUp 0.6s ease 0.28s both}
+.contact{animation:fadeUp 0.6s ease 0.32s both}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .hero-name{font-size:64px}
+  .cat-row{grid-template-columns:1fr;gap:0.75rem}
+  .flow-grid{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .contact{flex-direction:column;align-items:flex-start}
+  .contact-links{align-items:flex-start}
+  .quote-inner{font-size:38px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <span class="nav-name">MARYUM SHEHZAD</span>
+    <div class="nav-links">
+      <a class="nav-link" href="#toolkit">Toolkit</a>
+      <a class="nav-link" href="#workflow">Workflow</a>
+      <a class="nav-link" href="#services">Services</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">Social Media Marketer · Content Creator · Digital Strategist</div>
+    <div class="hero-name">MARYUM<br><span>SHEHZAD</span></div>
+    <div class="hero-tagline">"I don't just post content — I build presence."</div>
+    <div class="hero-bar">
+      <span class="hero-pill">Islamabad, PK</span>
+      <span class="hero-pill">Open to freelance</span>
+      <span class="hero-pill">Open to internships</span>
+      <span class="hero-dot"></span>
+      <span class="hero-avail">Available now</span>
+    </div>
+  </div>
+
+  <!-- TOOLKIT -->
+  <div class="sec" id="toolkit">
+    <div class="sec-header">
+      <span class="sec-num">01</span>
+      <span class="sec-title">Full toolkit</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--rose2)"></div>Primary tools</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--teal)"></div>AI tools</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--amber)"></div>Customer service</div>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-row">
+        <div class="cat-label">
+          <i class="ti ti-video cat-icon" aria-hidden="true"></i>
+          <span class="cat-name">Video editing</span>
+        </div>
+        <div class="tools-wrap">
+          <span class="tool-tag hot">CapCut</span>
+          <span class="tool-tag hot">Adobe Premiere Rush</span>
+          <span class="tool-tag">InShot</span>
+          <span class="tool-tag">VN Editor</span>
+          <span class="tool-tag">Splice</span>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label">
+          <i class="ti ti-layout cat-icon" aria-hidden="true"></i>
+          <span class="cat-name">Design & graphics</span>
+        </div>
+        <div class="tools-wrap">
+          <span class="tool-tag hot">Canva</span>
+          <span class="tool-tag">Adobe Express</span>
+          <span class="tool-tag">Lightroom Mobile</span>
+          <span class="tool-tag">VSCO</span>
+          <span class="tool-tag">Remove.bg</span>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label">
+          <i class="ti ti-microphone cat-icon" aria-hidden="true"></i>
+          <span class="cat-name">Voiceovers & audio</span>
+        </div>
+        <div class="tools-wrap">
+          <span class="tool-tag teal">ElevenLabs</span>
+          <span class="tool-tag teal">Murf AI</span>
+          <span class="tool-tag">Audacity</span>
+          <span class="tool-tag">Voicemod</span>
+          <span class="tool-tag">Descript</span>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label">
+          <i class="ti ti-robot cat-icon" aria-hidden="true"></i>
+          <span class="cat-name">AI & automation</span>
+        </div>
+        <div class="tools-wrap">
+          <span class="tool-tag teal">ChatGPT</span>
+          <span class="tool-tag teal">Claude</span>
+          <span class="tool-tag">Zapier</span>
+          <span class="tool-tag">Make (Integromat)</span>
+          <span class="tool-tag">ManyChat</span>
+          <span class="tool-tag">Buffer</span>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label">
+          <i class="ti ti-chart-bar cat-icon" aria-hidden="true"></i>
+          <span class="cat-name">Analytics</span>
+        </div>
+        <div class="tools-wrap">
+          <span class="tool-tag hot">Instagram Insights</span>
+          <span class="tool-tag">Meta Business Suite</span>
+          <span class="tool-tag">Google Analytics</span>
+          <span class="tool-tag">Later</span>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label">
+          <i class="ti ti-message-circle cat-icon" aria-hidden="true"></i>
+          <span class="cat-name">Customer service</span>
+        </div>
+        <div class="tools-wrap">
+          <span class="tool-tag amber">ManyChat</span>
+          <span class="tool-tag amber">Tidio</span>
+          <span class="tool-tag">Notion CRM</span>
+          <span class="tool-tag">Trello</span>
+          <span class="tool-tag">Slack</span>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label">
+          <i class="ti ti-calendar cat-icon" aria-hidden="true"></i>
+          <span class="cat-name">Scheduling & planning</span>
+        </div>
+        <div class="tools-wrap">
+          <span class="tool-tag">Buffer</span>
+          <span class="tool-tag">Later</span>
+          <span class="tool-tag">Notion</span>
+          <span class="tool-tag">Meta Planner</span>
+          <span class="tool-tag">Google Sheets</span>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-label">
+          <i class="ti ti-pencil cat-icon" aria-hidden="true"></i>
+          <span class="cat-name">Copywriting & SEO</span>
+        </div>
+        <div class="tools-wrap">
+          <span class="tool-tag hot">Grammarly</span>
+          <span class="tool-tag hot">Hemingway Editor</span>
+          <span class="tool-tag">Ubersuggest</span>
+          <span class="tool-tag">Answer The Public</span>
+          <span class="tool-tag">Hashtagify</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WORKFLOW -->
+  <div class="sec" id="workflow">
+    <div class="sec-header">
+      <span class="sec-num">02</span>
+      <span class="sec-title">Content workflow</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="flow-grid">
+      <div class="flow-step">
+        <div class="flow-num">01</div>
+        <div class="flow-label">Strategy</div>
+        <div class="flow-sub">Research · calendar · audience insights</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">02</div>
+        <div class="flow-label">Create</div>
+        <div class="flow-sub">Script · design · record · edit</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">03</div>
+        <div class="flow-label">Publish</div>
+        <div class="flow-sub">Schedule · caption · hashtags · SEO</div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-num">04</div>
+        <div class="flow-label">Analyse</div>
+        <div class="flow-sub">Insights · iterate · grow</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="sec" id="services">
+    <div class="sec-header">
+      <span class="sec-num">03</span>
+      <span class="sec-title">What I offer</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card">
+        <i class="ti ti-brand-instagram svc-icon" aria-hidden="true"></i>
+        <div class="svc-title">Instagram management</div>
+        <div class="svc-desc">Feed curation, Reels, Stories, carousels, captions, hashtag strategy, and community engagement.</div>
+      </div>
+      <div class="svc-card">
+        <i class="ti ti-speakerphone svc-icon" aria-hidden="true"></i>
+        <div class="svc-title">Brand campaigns</div>
+        <div class="svc-desc">End-to-end campaign planning, brand voice development, and cross-platform rollout.</div>
+      </div>
+      <div class="svc-card">
+        <i class="ti ti-writing svc-icon" aria-hidden="true"></i>
+        <div class="svc-title">Content creation</div>
+        <div class="svc-desc">SEO blogs, newsletters, scripts, product copy, and long-form social content.</div>
+      </div>
+      <div class="svc-card">
+        <i class="ti ti-bolt svc-icon" aria-hidden="true"></i>
+        <div class="svc-title">Automation setup</div>
+        <div class="svc-desc">DM automations via ManyChat, scheduling pipelines, Zapier workflows, and chatbot flows.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote">
+    <div class="quote-inner">STRATEGY.<br>AESTHETIC.<br><em>RESULTS.</em></div>
+    <div class="quote-attr">— Maryum Shehzad · Social Media Marketer</div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact" id="contact">
+    <div class="contact-left">
+      <h3>Let's work together.</h3>
+      <p>Available for freelance projects and internships.<br>Based in Islamabad — open to remote work globally.</p>
+    </div>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:maryammalik1503@gmail.com">
+        <i class="ti ti-mail"></i> maryammalik1503@gmail.com
+      </a>
+      <a class="contact-link" href="https://www.instagram.com/cheeky._.chirpy/" target="_blank">
+        <i class="ti ti-brand-instagram"></i> @cheeky._.chirpy
+      </a>
+      <a class="contact-link" href="https://medium.com/@maryammalik1503" target="_blank">
+        <i class="ti ti-brand-medium"></i> Medium articles
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/" target="_blank">
+        <i class="ti ti-brand-linkedin"></i> LinkedIn
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="footer-name">MARYUM SHEHZAD · SMM PORTFOLIO</span>
+    <span class="footer-note">Islamabad, Pakistan · 2025</span>
+  </div>
+
+</div>
+</body>
+</html>
